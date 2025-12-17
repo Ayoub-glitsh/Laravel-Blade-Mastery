@@ -1,9 +1,6 @@
 # Laravel Views & Blade Template Engine  
 ---
-<p align="center">
-  <img src="assets/capture.png" alt="Capture d'écran de la page d'accueil" >
-</p>
----
+
 
 ## 📚 Description
 
