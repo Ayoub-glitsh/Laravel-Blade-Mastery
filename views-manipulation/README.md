@@ -1,59 +1,233 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Views & Blade Template Engine
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📚 Description
 
-## About Laravel
+Projet Laravel démontrant l'utilisation des vues et du moteur de template **Blade**.
+Exercices pratiques réalisés dans le cadre du module **Développement Back-End** à l’**ISTA Quarzazate (DEVOWFS)**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🎯 Objectifs
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* Maîtriser la création et l'organisation des vues Laravel
+* Utiliser Blade pour le templating
+* Implémenter l’héritage de layouts
+* Gérer la transmission de données aux vues
+* Utiliser les structures de contrôle Blade
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📋 Exercices réalisés
 
-## Learning Laravel
+### ✅ Exercice 1 : Vues de base
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* Création de vues simples (Home, Profile)
+* Transmission de données aux vues
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### ✅ Exercice 2 : Organisation des vues
 
-## Laravel Sponsors
+* Création d’un dossier **Admin**
+* Vue `dashboard` dans `resources/views/admin/`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### ✅ Exercice 3 : Authentification
 
-### Premium Partners
+* Vue `status` avec les directives `@auth` et `@guest`
+* Affichage conditionnel selon l’état de connexion
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### ✅ Exercice 4 : Boucles et données
 
-## Contributing
+* Vue `stagiaires` avec liste dynamique
+* Utilisation de `@foreach` pour itérer sur un tableau
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### ✅ Exercice 5 : Layouts et héritage
 
-## Code of Conduct
+* Création d’un layout principal (`app.blade.php`)
+* Héritage de layout avec `@extends`
+* Sections dynamiques avec `@yield` et `@section`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🏗️ Structure du projet
 
-## Security Vulnerabilities
+```
+resources/views/
+├── layouts/
+│   └── app.blade.php        # Layout principal avec header/footer
+├── admin/
+│   └── dashboard.blade.php  # Vue d'administration
+├── Home.blade.php           # Page d'accueil simple
+├── home.blade.php           # Page d'accueil avec layout
+├── profile.blade.php        # Page profil avec données
+├── status.blade.php         # Page de statut d'authentification
+└── stagiaires.blade.php     # Liste des stagiaires
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🛠️ Technologies utilisées
 
-## License
+* **Laravel** 8 / 9 / 10
+* **Blade Template Engine**
+* **PHP** 7.4+
+* **HTML5 / CSS3**
+* **Git** (contrôle de version)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🚀 Installation et utilisation
+
+### 🔧 Prérequis
+
+* PHP >= 7.4
+* Composer
+* Laravel CLI (optionnel)
+
+### 📦 Étapes d'installation
+
+```bash
+# 1. Cloner le projet
+git clone https://github.com/VOTRE-USERNAME/Laravel-Blade-Exercises.git
+cd Laravel-Blade-Exercises
+
+# 2. Installer les dépendances
+composer install
+
+# 3. Configurer l'environnement
+cp .env.example .env
+php artisan key:generate
+
+# 4. Lancer le serveur
+php artisan serve
+```
+
+➡️ Ouvrir **[http://localhost:8000](http://localhost:8000)** dans le navigateur.
+
+## 📁 Fichiers importants
+
+### 📌 Routes (`routes/web.php`)
+
+```php
+Route::get('/', function () {
+    return view('home');
+})->name('home');
+
+Route::get('/profile', function () {
+    return view('profile', [
+        'nom' => 'Nassiri Ilyas',
+        'metier' => 'Formateur'
+    ]);
+})->name('profile');
+
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+})->name('admin.dashboard');
+
+Route::get('/status', function () {
+    return view('status');
+})->name('status');
+
+Route::get('/stagiaires', function () {
+    return view('stagiaires', [
+        'stagiaires' => ['Ali', 'Sara', 'Omar', 'Khadija']
+    ]);
+})->name('stagiaires');
+```
+
+### 📐 Layout principal
+
+`resources/views/layouts/app.blade.php`
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>@yield('title', 'Mon Application')</title>
+</head>
+<body>
+    <header>...</header>
+
+    <div class="content">
+        @yield('content')
+    </div>
+
+    <footer>...</footer>
+</body>
+</html>
+```
+
+### 🧩 Exemple d’héritage
+
+`resources/views/home.blade.php`
+
+```blade
+@extends('layouts.app')
+
+@section('title', 'Accueil')
+
+@section('content')
+    <h1>Bienvenue sur notre site</h1>
+    <p>Ceci est un exemple d’héritage de layout.</p>
+@endsection
+```
+
+## 🔥 Fonctionnalités Blade démontrées
+
+### Structures de contrôle
+
+```blade
+@if / @elseif / @else / @endif
+@switch / @case / @break / @default
+@isset / @empty
+@auth / @guest
+```
+
+### Boucles
+
+```blade
+@for / @foreach / @forelse / @while
+```
+
+Variable `$loop` : `$loop->first`, `$loop->last`, `$loop->index`
+
+### Layouts & sections
+
+```blade
+@extends('layouts.app')
+@section('content')
+@yield('content')
+```
+
+## 📸 Routes disponibles
+
+| Route           | URL           | Description                     |
+| --------------- | ------------- | ------------------------------- |
+| Home            | `/`           | Page d'accueil avec layout      |
+| Profile         | `/profile`    | Page profil avec données        |
+| Admin Dashboard | `/admin`      | Interface d'administration      |
+| Status          | `/status`     | Statut de connexion utilisateur |
+| Stagiaires      | `/stagiaires` | Liste des stagiaires            |
+
+## 📖 Concepts appris
+
+* **Séparation des responsabilités** : logique métier vs présentation
+* **Réutilisabilité** : layouts et composants partagés
+* **Sécurité** : échappement automatique avec `{{ }}`
+* **Productivité** : Blade vs PHP pur
+* **Organisation** : structure claire des vues
+
+## 👨‍🏫 Contexte pédagogique
+
+Projet réalisé dans le cadre du module **Développement Back-End**
+Filière **DEVOWFS – ISTA Quarzazate**
+Sous la direction du formateur **Nassiri Ilyas**.
+
+## 👤 Auteur
+
+**Ayoub Aguezar**
+Étudiant en Développement Web Full Stack
+ISTA Quarzazate – Filière DEVOWFS
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues :
+
+1. Fork le projet
+2. Créer une branche
+3. Commiter vos changements
+4. Pousser vers la branche
+5. Ouvrir une Pull Request
+
+## 📄 Licence
+
+Ce projet est sous licence **MIT**. Voir le fichier LICENSE pour plus de détails.
